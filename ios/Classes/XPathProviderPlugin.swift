@@ -21,7 +21,7 @@ public class XPathProviderPlugin: NSObject, FlutterPlugin {
     
     public func getAppDirectory()-> String? {
 //        var path = getDirectory(ofType: fileManagerDirectoryForType(type))
-        var path = getDirectory(ofType: FileManager.SearchPathDirectory.documentDirectory)
+        let path = getDirectory(ofType: FileManager.SearchPathDirectory.documentDirectory)
     return path
     }
     

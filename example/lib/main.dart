@@ -17,15 +17,16 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final _xPathProvider = XPathProvider();
+  var _path = "-";
 
   @override
   void initState() {
     super.initState();
   }
 
-  void _init() async {
-    var path = await _xPathProvider.getAppDirectory();
-    print("path: $path");
+  void _getAppDirectoryPath() async {
+    _path = await _xPathProvider.getAppDirectory() ?? "-";
+    setState(() {});
   }
 
   @override
@@ -36,9 +37,38 @@ class _MyAppState extends State<MyApp> {
           title: const Text('X Path Provider'),
         ),
         body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  "PATH:",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+                Text(
+                  _path,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ),
+        ),
+        bottomNavigationBar: SizedBox(
           child: ElevatedButton(
-            onPressed: _init,
-            child: const Text("get path"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.green,
+            ),
+            onPressed: _getAppDirectoryPath,
+            child: const Text(
+              "Get Path",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
       ),
