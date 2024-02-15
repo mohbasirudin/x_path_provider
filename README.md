@@ -1,15 +1,15 @@
-# x_path_provider
+# X Path Provider
 
-A new Flutter plugin project.
+Get application directory path
 
-## Getting Started
+## Supported Platform
+- Android: SDK 16+ (tested on Android API 34)
+- iOS: 12.0+ (tested on iOS 17.2)
+- Windows: Maintenance
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+## Example
+```dart
+final _xPathProvider = XPathProvider();
+var path = await _xPathProvider.getAppDirectory();
+print("path: $path");
+```

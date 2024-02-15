@@ -1,5 +1,5 @@
 name: x_path_provider
-description: "A new Flutter plugin project."
+description: "Get application directory path"
 version: 0.0.1
 homepage: https://github.com/mohbasirudin/x_path_provider
 

@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _xPathPrivider = XPathProvider();
+  final _xPathProvider = XPathProvider();
 
   @override
   void initState() {
@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _init() async {
-    var path = await _xPathPrivider.getAppDirectory();
+    var path = await _xPathProvider.getAppDirectory();
     print("path: $path");
   }
 
