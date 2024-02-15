@@ -1,7 +1,7 @@
 name: x_path_provider
 description: "A new Flutter plugin project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/mohbasirudin/x_path_provider
 
 environment:
   sdk: '>=3.2.2 <4.0.0'
