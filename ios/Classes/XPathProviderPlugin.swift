@@ -12,8 +12,14 @@ public class XPathProviderPlugin: NSObject, FlutterPlugin {
     switch call.method {
     case "getPlatformVersion":
       result("iOS " + UIDevice.current.systemVersion)
+    case "getAppDirectory":
+      result(getAppDirectory())
     default:
       result(FlutterMethodNotImplemented)
     }
+  }
+
+  public func getAppDirectory()-> String {
+  return "ini path directory =="
   }
 }

@@ -24,8 +24,8 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _init() async {
-    var _path = await _xPathPrivider.getAppDirectory();
-    print("path: $_path");
+    var path = await _xPathPrivider.getAppDirectory();
+    print("path: $path");
   }
 
   @override
